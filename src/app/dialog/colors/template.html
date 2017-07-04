@@ -1,0 +1,17 @@
+<h2 md-dialog-title>Palette</h2>
+<md-dialog-content>
+  <div *ngIf="current" class="color-class-name" ngClass="" fxFill>.palette-{{ current.palette }} > .{{ current.state }}</div>
+  <div fxFill class="palletes" fxLayout="row">
+    <div fxFlex>
+      <div class="cell"></div>
+      <div *ngFor="let state of states" class="cell">
+        {{ state }}
+      </div>
+    </div>
+    <div *ngFor="let palette of palettes" class="pallete palette-{{ palette }}" fxFlex>
+      <div class="cell">{{ palette }}</div>
+      <div *ngFor="let state of states" class="color {{ state }} cell" (click)="select(palette, state)">
+      </div>
+    </div>
+  </div>
+</md-dialog-content>

@@ -1,0 +1,28 @@
+@import '../../../assets/style';
+.preheader {
+  background: map-deep-get($site-palettes, symbol, lighter);
+}
+
+$primary: map_get($site-palettes, primary);
+
+.socials {
+  md-icon {
+    padding: $mat-menu-side-padding;
+    color: map-deep-get($site-palettes, symbol, default);
+  }
+}
+
+.button {
+  padding: $mat-menu-side-padding;
+  font-size: 24px;
+
+  &.login {
+    background: map-deep-get($site-palettes, symbol, default);
+    color: map-deep-get($site-palettes, symbol, default-contrast);
+  }
+
+  &.signin {
+    background: map-deep-get($site-palettes, primary, default);
+    color: map-deep-get($site-palettes, primary, default-contrast);
+  }
+}

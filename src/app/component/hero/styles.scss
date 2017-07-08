@@ -1,0 +1,32 @@
+@import '../../../assets/style';
+.block-hero {
+  background-image: url(background.jpg);
+  background-size: cover;
+  height: 850px;
+  color: map-deep-get($site-palettes, symbol, darker-contrast);
+
+  .motto {
+    font-family: 'Satisfy', cursive;
+    font-size: 112px;
+    line-height: 112px;
+  }
+
+  .motto-1 {
+    font-size: 36px;
+
+    .underline {
+      line-height: 33px;
+      font-size: 33px;
+      border-bottom: solid 3px map-deep-get($site-palettes, primary, default);
+    }
+  }
+
+  .call-to-action {
+    padding: $mat-menu-side-padding;
+    background: map-deep-get($site-palettes, symbol, lighter);
+    color: map-deep-get($site-palettes, symbol, darker);
+    line-height: 16px;
+    font-size: 16px;
+    border-radius: 24px;
+  }
+}

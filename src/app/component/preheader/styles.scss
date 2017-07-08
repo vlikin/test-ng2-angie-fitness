@@ -3,8 +3,6 @@
   background: map-deep-get($site-palettes, symbol, lighter);
 }
 
-$primary: map_get($site-palettes, primary);
-
 .socials {
   md-icon {
     padding: $mat-menu-side-padding;
@@ -13,8 +11,9 @@ $primary: map_get($site-palettes, primary);
 }
 
 .button {
-  padding: $mat-menu-side-padding;
-  font-size: 24px;
+  padding: $mat-menu-side-padding + 4;
+  font-size: 24px - 8;
+  line-height: 24px - 8;
 
   &.login {
     background: map-deep-get($site-palettes, symbol, default);

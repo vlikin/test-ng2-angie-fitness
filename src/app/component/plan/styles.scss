@@ -1,0 +1,153 @@
+@import '../../../assets/style';
+.block-plan {
+  font-size: 24px;
+  line-height: 24px;
+
+  .summary{
+    background: map-deep-get($site-palettes, symbol, lighter);
+    padding: $mat-menu-side-padding;
+
+    .highlight {
+      font-weight: 600;
+      color: map-deep-get($site-palettes, primary, default);
+    }
+
+    .title {
+      font-size: 36px;
+      line-height: 36px;
+      font-weight: 600;
+      padding: $mat-menu-side-padding;
+      text-align: center;
+    }
+
+    .description {
+      font-size: 24px;
+      line-height: 24px;
+      padding: $mat-menu-side-padding;
+      text-align: center;
+    }
+  }
+
+  .plans {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-items: stretch;
+
+    .plan {
+      background-size: cover;
+      color: map-deep-get($site-palettes, symbol, darker-contrast);
+      text-align: justify;
+      display: flex;
+      flex-grow: 1;
+
+      flex-direction: column;
+      justify-content: space-around;
+      align-content: center;
+      padding-top: $mat-menu-side-padding;
+
+      >.description {
+        display: flex;
+        flex-grow: 0;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+
+        .left {
+          display: flex;
+          width: 88px;
+          .text {
+            font-size: 168px;
+            line-height: 83px;
+          }
+        }
+
+        .right {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-content: center;
+          > .day {
+            display: flex;
+            letter-spacing: 20px;
+            font-size: 56px;
+            line-height: 56px;
+          }
+
+          > .description {
+            display: flex;
+            font-size: 20px;
+            line-height: 20px;
+          }
+
+          > .by {
+            display: flex;
+            margin: auto;
+            font-weight: 600;
+          }
+
+          > .name {
+            display: flex;
+            font-size: 20px;
+            line-height: 20px;
+          }
+
+          > .fitness {
+            display: flex;
+            letter-spacing: 10px;
+            font-weight: 600;
+          }
+        }
+      }
+
+      > .price {
+
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        > span {
+          border: solid 1px map-deep-get($site-palettes, primary, darker-contrast);
+          border-radius: 56px;
+          padding: 28px;
+          width: 56px;
+          height: 56px;
+          display: flex;
+          font-size: 24px;
+          line-height: 56px;
+          text-align: center;
+        }
+      }
+
+      &.plan-a {
+        background: url(images/plan-a.jpg);
+        background-size: cover;
+        .text {
+          transform: scaleX(0.7);
+          transform-origin: left;
+        }
+      }
+
+      &.plan-b {
+        background: url(images/plan-b.jpg);
+        .text {
+          transform: scaleX(0.33);
+          transform-origin: left;
+        }
+      }
+
+      &.plan-c {
+        background: url(images/plan-c.jpg);
+
+        .description {
+          .left {
+            .text {
+              line-height: 129px;
+              transform: scaleX(0.33);
+              transform-origin: left;
+            }
+          }
+        }
+      }
+    }
+  }
+}

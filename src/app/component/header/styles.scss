@@ -1,0 +1,38 @@
+@import '../../../assets/style';
+.header {
+  padding: $mat-menu-side-padding;
+
+  .presentation {
+    .logo {
+      width: 56px;
+      height: 56px;
+      background-image: url(logo.png);
+      background-size: contain;
+    }
+
+    .site-name {
+      padding: $mat-menu-side-padding;
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+
+  .menu {
+    .item {
+      padding: $mat-menu-side-padding;
+      padding-right: 0;
+      font-size: 24px;
+      line-height: 24px;
+
+      &.active {
+        border-bottom: solid 1px map-deep-get($site-palettes, primary, default);
+        margin-left: $mat-menu-side-padding;
+        padding-right: $mat-menu-side-padding;
+        line-height: 23px;
+      }
+
+      &:last-child {
+      }
+    }
+  }
+}

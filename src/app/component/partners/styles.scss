@@ -1,0 +1,65 @@
+@import '../../../assets/style';
+.block-partners {
+  padding: $mat-menu-side-padding;
+
+  > .title {
+    font-size: 36px;
+    font-weight: 600;
+    padding: $mat-menu-side-padding;
+    text-align: center;
+  }
+
+  > .description {
+    text-align: center;
+    font-size: 24px;
+  }
+
+  > .partners {
+    display: flex;
+    flex-direction: row;
+    padding: $mat-menu-side-padding;
+
+
+    > .container {
+      display: flex;
+      flex-grow: 1;
+      flex-direction: row;
+
+      .partner {
+        background-size: contain;
+        display: flex;
+        flex-grow: 1;
+        heigh: 40px;
+
+        &.partner-a {
+          background-image: url(images/partner-a.png);
+        }
+
+        &.partner-b {
+          background-image: url(images/partner-b.png);
+        }
+
+        &.partner-c {
+          background-image: url(images/partner-c.jpg);
+        }
+
+        &.partner-d {
+          background-image: url(images/partner-d.jpg);
+        }
+      }
+    }
+
+    > .arrow {
+      margin: auto;
+      padding: $mat-menu-side-padding;
+
+      &.left {
+
+      }
+
+      &.right {
+
+      }
+    }
+  }
+}

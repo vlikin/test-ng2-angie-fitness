@@ -12,13 +12,32 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './component/app/component';
 import { PreheaderComponent } from './component/preheader/component';
+import { FooterComponent } from './component/footer/component';
+import { HeaderComponent } from './component/header/component';
+import { HeroComponent } from './component/hero/component';
+import { PartnersComponent } from './component/partners/component';
+import { PlanComponent } from './component/plan/component';
+import { SubscribeComponent } from './component/subscribe/component';
+
 import { ColorsDialog } from './dialog/colors/component';
+
+import { SquareDirective } from './directive/squre';
+import { HeightRatioDirective } from './directive/height-ratio';
 
 @NgModule({
   declarations: [
     AppComponent,
+    ColorsDialog,
+    FooterComponent,
+    HeaderComponent,
+    HeroComponent,
+    PartnersComponent,
+    PlanComponent,
     PreheaderComponent,
-    ColorsDialog
+    SubscribeComponent,
+
+    HeightRatioDirective,
+    SquareDirective
   ],
   imports: [
     BrowserModule,

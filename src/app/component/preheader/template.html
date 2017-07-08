@@ -1,12 +1,12 @@
-<div fxLayout="row" class="preheader">
+<div fxLayout="row" class="preheader" fxFill>
   <div fxFlex class="socials">
-    <md-icon>home</md-icon>
-    <md-icon>explore</md-icon>
-    <md-icon>extension</md-icon>
-    <md-icon>share</md-icon>
+    <md-icon class="mdi mdi-facebook mdi-24px"></md-icon>
+    <md-icon class="mdi mdi-twitter mdi-24px"></md-icon>
+    <md-icon class="mdi mdi-instagram mdi-24px"></md-icon>
+    <md-icon class="mdi mdi-youtube-play mdi-24px"></md-icon>
   </div>
-  <div class="actions" fxLayout="row">
+  <div class="actions" fxLayoutAlign="row">
     <div fxFlex class="button login">LOGIN</div>
-    <div fxFlex class="button signin">SIGNIN</div>
+    <div fxFlex class="button signin" (click)="openPaletteDialog()">PALETTE</div>
   </div>
 </div>

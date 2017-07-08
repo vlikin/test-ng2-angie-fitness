@@ -1,0 +1,31 @@
+@import '../../../assets/style';
+.block-subscribe {
+  padding: $mat-menu-side-padding;
+  font-size: 24px;
+  line-height: 24px;
+
+  .description {
+    padding: $mat-menu-side-padding;
+  }
+
+  .form {
+    input {
+      padding: $mat-menu-side-padding;
+      line-height: 16px;
+      font-size: 16px;
+      border-radius: 25px;
+      background-color: map-deep-get($site-palettes, symbol, lighter);
+      color: map-deep-get($site-palettes, symbol, darker);
+      border: solid 1px map-deep-get($site-palettes, symbol, darker);
+    }
+
+    button {
+      padding: $mat-menu-side-padding;
+      line-height: 18px;
+      font-size: 18px;
+      border-radius: 25px;
+      background-color: map-deep-get($site-palettes, symbol, darker);
+      color: map-deep-get($site-palettes, symbol, darker-contrast);
+    }
+  }
+}

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,600');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600|Satisfy');
+@import '~mdi/css/materialdesignicons.min.css';
 @import '~@angular/material/theming';
 @include mat-core();
 @import './partials/_default-theme';
@@ -21,6 +22,14 @@ $color-states: darker default lighter darker-contrast default-contrast lighter-c
       .#{$state} {
         background: map_get($palette, $state);
       }
+
+      &.#{$state}-color {
+        color: map_get($palette, $state);
+      }
+
+      &.#{$state}-background {
+        background: map_get($palette, $state);
+      }
     }
   }
 }
@@ -37,5 +46,7 @@ body {
   color: map-deep-get($site-palettes, symbol, darker);
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
   margin: 0px;
 }

@@ -8,6 +8,10 @@ import { Component } from '@angular/core';
     <block-hero></block-hero>
     <block-subscribe></block-subscribe>
     <block-plan></block-plan>
+    <block-about></block-about>
+    <block-blog></block-blog>
+    <block-testimonials></block-testimonials>
+    <block-motto></block-motto>
     <block-partners></block-partners>
     <block-footer></block-footer>
   `,

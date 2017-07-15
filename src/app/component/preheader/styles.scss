@@ -4,6 +4,7 @@
 }
 
 .socials {
+  text-align: left;
   md-icon {
     padding: $mat-menu-side-padding;
     color: map-deep-get($site-palettes, symbol, default);

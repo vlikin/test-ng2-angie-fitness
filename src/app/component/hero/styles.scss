@@ -2,7 +2,7 @@
 .block-hero {
   background-image: url(background.jpg);
   background-size: cover;
-  height: 850px;
+  height: 90vh;
   color: map-deep-get($site-palettes, symbol, darker-contrast);
 
   .motto {

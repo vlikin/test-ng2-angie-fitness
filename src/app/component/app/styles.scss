@@ -1,0 +1,42 @@
+.sfx-container-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.sfx-container-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.sfx-fill {
+  flex-grow: 1;
+}
+
+.vh100 {
+  height: 100vh;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: red;
+
+  > .preheader {
+    background: green;
+    height: 100px;
+  }
+
+  > .header {
+    background: blue;
+    height: 100px;
+  }
+
+  > .hero {
+    background: yellow;
+    flex-direction: row;
+    flex-grow: 1;
+    display: flex;
+  }
+}

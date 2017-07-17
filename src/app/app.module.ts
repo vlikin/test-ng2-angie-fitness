@@ -9,6 +9,7 @@ import {
 } from '@angular/material';
 import 'hammerjs';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MnFullpageModule } from 'ngx-fullpage'
 
 import { AppComponent } from './component/app/component';
 import { AboutComponent } from './component/about/component';
@@ -52,6 +53,7 @@ import { HeightRatioDirective } from './directive/height-ratio';
     BrowserAnimationsModule,
     CommonModule,
     FlexLayoutModule,
+    MnFullpageModule.forRoot(),
     MdButtonModule,
     MdDialogModule,
     MdIconModule

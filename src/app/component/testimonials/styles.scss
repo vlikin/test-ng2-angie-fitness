@@ -1,65 +1,68 @@
 @import '../../../assets/style';
-.block-testimonials {
+
+:host {
   background: map-deep-get($site-palettes, symbol, lighter);
   padding: $mat-menu-side-padding;
+  display: flex;
+  flex-direction: column;
+}
 
-  .title {
+.title {
+  padding: $mat-menu-side-padding;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+}
+
+.subtitle {
+  padding: $mat-menu-side-padding;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.opinions {
+  display: flex;
+  flex-direction: row;
+  padding: $mat-menu-side-padding;
+
+  .opinion {
     padding: $mat-menu-side-padding;
-    font-size: 36px;
-    line-height: 36px;
-    text-align: center;
-  }
-
-  .subtitle {
-    padding: $mat-menu-side-padding;
-    font-size: 24px;
-    line-height: 24px;
-    text-align: center;
-  }
-
-  .opinions {
     display: flex;
-    flex-direction: row;
-    padding: $mat-menu-side-padding;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    .opinion {
+    .photo {
+      margin: $mat-menu-side-padding;
+      height: 150px;
+      width: 150px;
+      border-radius: 75px;
+    }
+
+    .name {
       padding: $mat-menu-side-padding;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      font-weight: 600;
+    }
 
-      .photo {
-        margin: $mat-menu-side-padding;
-        height: 150px;
-        width: 150px;
-        border-radius: 75px;
-      }
+    .text {
+      padding: $mat-menu-side-padding;
+    }
 
-      .name {
-        padding: $mat-menu-side-padding;
-        font-weight: 600;
-      }
+    &.opinion-a {
 
-      .text {
-        padding: $mat-menu-side-padding;
-      }
-
-      &.opinion-a {
-
-      }
     }
   }
+}
 
-  > .actions {
-    > .action {
-      padding: $mat-menu-side-padding;
-      background: map-deep-get($site-palettes, primary, default);
-      color: map-deep-get($site-palettes, primary, default-contrast);
-      line-height: 16px;
-      font-size: 16px;
-      border: 0;
-      border-radius: 24px;
-    }
+> .actions {
+  > .action {
+    padding: $mat-menu-side-padding;
+    background: map-deep-get($site-palettes, primary, default);
+    color: map-deep-get($site-palettes, primary, default-contrast);
+    line-height: 16px;
+    font-size: 16px;
+    border: 0;
+    border-radius: 24px;
   }
 }

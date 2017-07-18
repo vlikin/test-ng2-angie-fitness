@@ -55,7 +55,7 @@
   }
 }
 
-> .actions {
+.actions {
   > .action {
     padding: $mat-menu-side-padding;
     background: map-deep-get($site-palettes, primary, default);

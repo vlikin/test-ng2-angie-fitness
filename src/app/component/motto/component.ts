@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding, Input } from '@angular/core';
 
 @Component({
   selector: 'block-motto',
@@ -6,4 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./styles.scss']
 })
 export class MottoComponent {
+  @HostBinding('style.background-image')
+  @Input()
+  image:string = '';
+
+  @HostBinding('style.color')
+  @Input()
+  color:string = '';
 }

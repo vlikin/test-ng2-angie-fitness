@@ -1,7 +1,8 @@
 @import '../../../assets/style';
 
 :host {
-  background-image: url(background.jpg);
+  background: green;
+  //background-image: url(background.jpg);
   background-size: cover;
   color: map-deep-get($site-palettes, symbol, darker);
   display: flex;

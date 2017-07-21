@@ -1,0 +1,73 @@
+@mixin cell {
+  @media all and (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media all and (min-width: 601px) and (max-width: 959px) {
+    @content;
+  }
+}
+
+@mixin font-size-text {
+  font-size: 100%;
+  line-height: 110%;
+}
+
+@mixin control-sizes {
+  font-size: 100%;
+  line-height: 100%;
+  padding: 8px;
+  border-radius: 23px;
+}
+
+@mixin font-size-hero {
+  font-size: 700%;
+  line-height: 100%;
+
+  @include cell {
+    font-size: 300%;
+    line-height: 300%;
+  };
+}
+
+@mixin font-size-heading {
+  font-size: 300%;
+  line-height: 100%;
+
+  @include cell {
+    font-size: 150%;
+    line-height: 100%;
+  };
+}
+
+@mixin font-size-subheading {
+  font-size: 200%;
+  line-height: 100%;
+
+  @include cell {
+    font-size: 130%;
+    line-height: 100%;
+  };
+}
+
+@mixin font-size-title {
+  font-size: 300%;
+  line-height: 100%;
+
+  @include cell {
+    font-size: 130%;
+    line-height: 100%;
+  };
+}
+
+@mixin font-size-subtitle {
+  font-size: 200%;
+  line-height: 100%;
+
+  @include cell {
+    font-size: 120%;
+    line-height: 100%;
+  };
+}

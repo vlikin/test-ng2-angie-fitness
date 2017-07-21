@@ -3,42 +3,17 @@
 @import '~mdi/css/materialdesignicons.min.css';
 @import '~@angular/material/theming';
 @include mat-core();
-@import './partials/_default-theme';
+@import './partials/default-theme';
+@import './partials/functions';
+@import './partials/mixins';
 $config: mat-typography-config();
+@import "./partials/palette";
 
-
-$hhh: 100px;
-
-$site-palettes: (
-  symbol: mat-palette($mat-grey),
-  primary: $default-primary-color,
-  accent: $default-accent-color,
-);
-
-$color-states: darker default lighter darker-contrast default-contrast lighter-contrast;
-@each $name, $palette in $site-palettes {
-  .palette-#{$name} {
-    @each $state in $color-states {
-      .#{$state} {
-        background: map_get($palette, $state);
-      }
-
-      &.#{$state}-color {
-        color: map_get($palette, $state);
-      }
-
-      &.#{$state}-background {
-        background: map_get($palette, $state);
-      }
-    }
-  }
-}
-
-@function map-deep-get($map, $keys...) {
-  @each $key in $keys {
-    $map: map-get($map, $key);
-  }
-  @return $map;
+html {
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
 }
 
 body {
@@ -46,8 +21,8 @@ body {
   color: map-deep-get($site-palettes, symbol, darker);
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
-  font-size: 24px;
-  line-height: 24px;
   margin: 0px;
   text-align: center;
+
+  @include font-size-text;
 }

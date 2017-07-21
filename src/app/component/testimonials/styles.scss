@@ -16,8 +16,6 @@
 
 .subtitle {
   padding: $mat-menu-side-padding;
-  font-size: 24px;
-  line-height: 24px;
   text-align: center;
 }
 
@@ -25,6 +23,10 @@
   display: flex;
   flex-direction: row;
   padding: $mat-menu-side-padding;
+
+  @include cell {
+    flex-direction: column;
+  }
 
   .opinion {
     padding: $mat-menu-side-padding;

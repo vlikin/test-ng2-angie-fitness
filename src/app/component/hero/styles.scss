@@ -13,17 +13,18 @@
 
 .motto {
   font-family: 'Satisfy', cursive;
-  font-size: 112px;
-  line-height: 112px;
+  @include font-size-hero;
 }
 
 .motto-1 {
-  font-size: 36px;
+  @include font-size-subheading;
   padding: $mat-menu-side-padding * 4;
 
+  @include cell {
+    padding: 0;
+  };
+
   .underline {
-    line-height: 33px;
-    font-size: 33px;
     border-bottom: solid 3px map-deep-get($site-palettes, primary, default);
   }
 }
@@ -32,7 +33,5 @@
   padding: $mat-menu-side-padding;
   background: map-deep-get($site-palettes, symbol, lighter);
   color: map-deep-get($site-palettes, symbol, darker);
-  line-height: 16px;
-  font-size: 16px;
   border-radius: 24px;
 }

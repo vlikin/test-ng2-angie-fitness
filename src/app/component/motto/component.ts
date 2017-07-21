@@ -13,4 +13,12 @@ export class MottoComponent {
   @HostBinding('style.color')
   @Input()
   color:string = '';
+
+   @HostBinding('class.hideIfHeight')
+   @Input()
+   hideIfHeight: boolean = false;
+
+   @HostBinding('class.hideIfCell')
+   @Input()
+   hideIfCell: boolean = false;
 }

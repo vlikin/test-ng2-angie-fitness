@@ -1,7 +1,5 @@
 @import '../../../assets/style';
 :host {
-  font-size: 24px;
-  line-height: 24px;
   display: flex;
   flex-direction: column;
 }
@@ -19,18 +17,19 @@
   }
 
   .title {
-    font-size: 36px;
-    line-height: 36px;
+    @include font-size-subheading;
     font-weight: 600;
     padding: $mat-menu-side-padding;
     text-align: center;
   }
 
   .description {
-    font-size: 24px;
-    line-height: 24px;
     padding: $mat-menu-side-padding;
     text-align: center;
+
+    @include cell {
+      display: none;
+    }
   }
 }
 
@@ -39,6 +38,10 @@
   flex-direction: row;
   align-items: stretch;
   justify-items: stretch;
+
+  @include cell {
+    flex-direction: column;
+  }
 
   .plan {
     background-size: cover;
@@ -84,6 +87,10 @@
           display: flex;
           font-size: 20px;
           line-height: 20px;
+
+          @include cell {
+            display: none;
+          }
         }
 
         > .by {

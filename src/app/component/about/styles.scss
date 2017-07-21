@@ -2,8 +2,6 @@
 
 :host {
   text-align: center;
-  font-size: 24px;
-  line-height: 32px;
   position: relative;
   background: url('lemon.jpg') right bottom no-repeat,  url('lemon.jpg') left top no-repeat;
   flex-grow: 1;
@@ -13,16 +11,20 @@
 }
 
 .title {
-  font-size: 36px;
-  line-height: 36px;
+  @include font-size-title;
 }
 
 .subtitle {
+  @include font-size-subtitle;
   font-weight: 600;
 }
 
 .text {
   padding: $mat-menu-side-padding * 4;
+
+  @include cell {
+    padding: $mat-menu-side-padding * 2;
+  }
 }
 
 .actions {

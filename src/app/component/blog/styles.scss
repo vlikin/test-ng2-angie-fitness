@@ -48,8 +48,6 @@
       flex-direction: column;
       justify-content: space-around;
       align-content: space-around;
-      font-size: 24px;
-
 
       > .icon {
 
@@ -91,15 +89,11 @@
         }
 
         > .subtitle {
-          font-size: 24px;
-          line-height: 24px;
         }
       }
     }
 
     &.post-e {
-      font-size: 24px;
-      line-height: 24px;
 
       p {
         padding: 0px;
@@ -116,7 +110,6 @@
         }
 
         .hash {
-          font-size: 24px;
         }
 
         .text {

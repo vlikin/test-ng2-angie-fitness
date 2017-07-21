@@ -3,7 +3,7 @@
   padding: $mat-menu-side-padding;
 
   > .title {
-    font-size: 36px;
+    @include font-size-title;
     font-weight: 600;
     padding: $mat-menu-side-padding;
     text-align: center;
@@ -11,7 +11,6 @@
 
   > .description {
     text-align: center;
-    font-size: 24px;
   }
 
   > .partners {
@@ -29,7 +28,6 @@
         background-size: contain;
         display: flex;
         flex-grow: 1;
-        heigh: 40px;
 
         &.partner-a {
           background-image: url(images/partner-a.png);

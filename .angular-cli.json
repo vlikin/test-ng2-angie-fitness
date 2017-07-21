@@ -21,7 +21,10 @@
       "styles": [
         "./assets/style.scss",
         "./assets/partials/_default-theme.scss",
-        "./assets/partials/_secondary-theme.scss"
+        "./assets/partials/_secondary-theme.scss",
+        "./assets/partials/_functions.scss",
+        "./assets/partials/_mixins.scss",
+        "./assets/partials/_palette.scss"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.js",

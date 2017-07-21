@@ -1,4 +1,5 @@
 @import '../../../assets/style';
+
 .header {
   padding: $mat-menu-side-padding;
 
@@ -8,12 +9,11 @@
       height: 56px;
       background-image: url(logo.png);
       background-size: contain;
+      background-repeat: no-repeat;
     }
 
     .site-name {
       padding: $mat-menu-side-padding;
-      font-size: 24px;
-      line-height: 24px;
     }
   }
 
@@ -21,8 +21,6 @@
     .item {
       padding: $mat-menu-side-padding;
       padding-right: 0;
-      font-size: 24px;
-      line-height: 24px;
 
       &.active {
         border-bottom: solid 1px map-deep-get($site-palettes, primary, default);

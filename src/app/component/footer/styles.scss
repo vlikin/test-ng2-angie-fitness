@@ -1,4 +1,5 @@
 @import '../../../assets/style';
+
 .to-top {
   padding: $mat-menu-side-padding;
   background: map-deep-get($site-palettes, symbol, lighter);
@@ -10,17 +11,23 @@
   background: map-deep-get($site-palettes, symbol, darker);
   color: map-deep-get($site-palettes, symbol, darker-contrast);
   padding: $mat-menu-side-padding;
-  font-size: 24px;
-  line-height: 24px;
 
   .first-row {
     display: flex;
     flex-direction: row;
 
+    @include cell {
+      flex-direction: column;
+    }
+
     .first-container {
       display: block;
       flex-grow: 1;
       padding: $mat-menu-side-padding;
+
+      @include cell {
+        padding: 0;
+      }
 
       .name {
         padding: $mat-menu-side-padding;
@@ -28,13 +35,17 @@
 
       .menu {
         padding: $mat-menu-side-padding;
+        text-align: left;
       }
     }
 
     .second-container {
       display: block;
       flex-grow: 1;
-      padding: $mat-menu-side-padding;
+
+      @include cell {
+        padding: 0;
+      }
 
       .socials {
         text-align: right;
@@ -46,22 +57,15 @@
         padding: $mat-menu-side-padding;
 
         input {
-          padding: $mat-menu-side-padding;
-          line-height: 16px;
-          font-size: 16px;
-          border-radius: 25px;
+          @include control-sizes;
           background-color: map-deep-get($site-palettes, symbol, darker);
           color: map-deep-get($site-palettes, symbol, darker-contrast);
         }
 
         button {
-          padding: $mat-menu-side-padding;
-          line-height: 18px;
-          font-size: 18px;
-          border-radius: 25px;
+          @include control-sizes;
           background-color: map-deep-get($site-palettes, symbol, lighter);
           color: map-deep-get($site-palettes, symbol, darker);
-          border: solid 1px map-deep-get($site-palettes, symbol, darker);
           margin-left: -46px;
         }
       }
@@ -71,6 +75,10 @@
   .second-row {
     display: flex;
     flex-direction: row;
+
+    @media only all and (max-width: 768px) {
+      flex-direction: column;
+    }
 
     .first {
       display: flex;
@@ -87,6 +95,4 @@
       }
     }
   }
-
-
 }

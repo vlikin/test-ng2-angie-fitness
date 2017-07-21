@@ -1,8 +1,6 @@
 @import '../../../assets/style';
 
 :host {
-  background: green;
-  //background-image: url(background.jpg);
   background-size: cover;
   color: map-deep-get($site-palettes, symbol, darker);
   display: flex;
@@ -11,9 +9,20 @@
   flex-grow: 1;
 }
 
+:host(.hideIfHeight) {
+  @media only all and (max-height: 768px) {
+    display: none;
+  }
+}
+
+:host(.hideIfCell) {
+  @include cell {
+    display: none;
+  }
+}
+
 .motto {
   margin: auto;
   text-align: center;
-  font-size: 56px;
-  line-height: 56px;
+  @include font-size-heading;
 }

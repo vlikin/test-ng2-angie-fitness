@@ -1,0 +1,27 @@
+@import '~@angular/material/theming';
+@import './default-theme';
+
+$site-palettes: (
+  symbol: mat-palette($mat-grey),
+  primary: $default-primary-color,
+  accent: $default-accent-color,
+);
+
+$color-states: darker default lighter darker-contrast default-contrast lighter-contrast;
+@each $name, $palette in $site-palettes {
+  .palette-#{$name} {
+    @each $state in $color-states {
+      .#{$state} {
+        background: map_get($palette, $state);
+      }
+
+      &.#{$state}-color {
+        color: map_get($palette, $state);
+      }
+
+      &.#{$state}-background {
+        background: map_get($palette, $state);
+      }
+    }
+  }
+}
